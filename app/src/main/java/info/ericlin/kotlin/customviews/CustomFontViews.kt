@@ -14,7 +14,7 @@ private fun readTypeFace(context: Context, attrs: AttributeSet?): Typeface? {
     attrs ?: return null
     val a = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomFont, 0, 0)
     return try {
-        val fontName = a.getString(R.styleable.CustomFont_font_name)
+        val fontName = a.getString(R.styleable.CustomFont_font_name) ?: return null
         Typeface.createFromAsset(context.assets, fontName)
     } catch(e: Exception) {
         null
@@ -25,7 +25,7 @@ private fun readTypeFace(context: Context, attrs: AttributeSet?): Typeface? {
 
 class CustomFontTextView @JvmOverloads constructor(context: Context,
                                                    attrs: AttributeSet? = null,
-                                                   defStyleAttr: Int = 0
+                                                   defStyleAttr: Int = android.R.attr.textViewStyle
 ) : AppCompatTextView(context, attrs, defStyleAttr) {
     init {
         typeface = readTypeFace(context, attrs)
@@ -34,7 +34,7 @@ class CustomFontTextView @JvmOverloads constructor(context: Context,
 
 class CustomFontButton @JvmOverloads constructor(context: Context,
                                                  attrs: AttributeSet? = null,
-                                                 defStyleAttr: Int = 0
+                                                 defStyleAttr: Int = android.support.v7.appcompat.R.attr.buttonStyle
 ) : AppCompatButton(context, attrs, defStyleAttr) {
     init {
         typeface = readTypeFace(context, attrs)
@@ -43,7 +43,7 @@ class CustomFontButton @JvmOverloads constructor(context: Context,
 
 class CustomFontEditText @JvmOverloads constructor(context: Context,
                                                    attrs: AttributeSet? = null,
-                                                   defStyleAttr: Int = 0
+                                                   defStyleAttr: Int = R.attr.editTextStyle
 ) : AppCompatEditText(context, attrs, defStyleAttr) {
     init {
         typeface = readTypeFace(context, attrs)

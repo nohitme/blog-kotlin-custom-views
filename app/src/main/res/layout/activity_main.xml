@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kotlin makes custom views easier"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:font_name="Revalia-Regular.ttf"
         app:layout_constraintBottom_toTopOf="@id/custom_button"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,11 +20,10 @@
 
     <info.ericlin.kotlin.customviews.CustomFontButton
         android:id="@+id/custom_button"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button works, too"
-        android:textSize="30dp"
+        android:textSize="24sp"
         app:font_name="Revalia-Regular.ttf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
