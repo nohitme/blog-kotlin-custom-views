@@ -23,27 +23,30 @@ private fun readTypeFace(context: Context, attrs: AttributeSet?): Typeface? {
     }
 }
 
-class CustomFontTextView @JvmOverloads constructor(context: Context,
-                                                   attrs: AttributeSet? = null,
-                                                   defStyleAttr: Int = android.R.attr.textViewStyle
+class CustomFontTextView @JvmOverloads constructor(
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyleAttr: Int = android.R.attr.textViewStyle
 ) : AppCompatTextView(context, attrs, defStyleAttr) {
     init {
         typeface = readTypeFace(context, attrs)
     }
 }
 
-class CustomFontButton @JvmOverloads constructor(context: Context,
-                                                 attrs: AttributeSet? = null,
-                                                 defStyleAttr: Int = android.support.v7.appcompat.R.attr.buttonStyle
+class CustomFontButton @JvmOverloads constructor(
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyleAttr: Int = android.support.v7.appcompat.R.attr.buttonStyle
 ) : AppCompatButton(context, attrs, defStyleAttr) {
     init {
         typeface = readTypeFace(context, attrs)
     }
 }
 
-class CustomFontEditText @JvmOverloads constructor(context: Context,
-                                                   attrs: AttributeSet? = null,
-                                                   defStyleAttr: Int = R.attr.editTextStyle
+class CustomFontEditText @JvmOverloads constructor(
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyleAttr: Int = R.attr.editTextStyle
 ) : AppCompatEditText(context, attrs, defStyleAttr) {
     init {
         typeface = readTypeFace(context, attrs)
